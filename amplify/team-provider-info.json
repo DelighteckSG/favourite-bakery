@@ -10,6 +10,11 @@
       "StackName": "amplify-favouritebakery-dev-163951",
       "StackId": "arn:aws:cloudformation:ap-south-1:963320469145:stack/amplify-favouritebakery-dev-163951/fb080900-b030-11ed-a306-06bb0c7171ee",
       "AmplifyAppId": "d1n0ry8kfmjpg1"
+    },
+    "categories": {
+      "api": {
+        "favouritebakery": {}
+      }
     }
   }
 }

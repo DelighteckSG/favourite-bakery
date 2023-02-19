@@ -45,5 +45,11 @@
         ]
       }
     }
+  },
+  "analytics": {
+    "favouritebakerypinpoint": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

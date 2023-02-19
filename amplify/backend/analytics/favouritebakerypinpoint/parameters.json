@@ -1,0 +1,21 @@
+{
+    "appName": "favouritebakerypinpoint",
+    "roleName": "pinpointLambdaRole200d6edd",
+    "cloudformationPolicyName": "cloudformationPolicy200d6edd",
+    "cloudWatchPolicyName": "cloudWatchPolicy200d6edd",
+    "pinpointPolicyName": "pinpointPolicy200d6edd",
+    "authPolicyName": "pinpoint_amplify_200d6edd",
+    "unauthPolicyName": "pinpoint_amplify_200d6edd",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

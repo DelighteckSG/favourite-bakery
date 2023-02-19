@@ -1,0 +1,10 @@
+classDiagram
+    Subscriber <|-- Subscriber
+    Subscriber : +string email
+    Subscriber : +String name
+    Subscriber : +String contact no
+    Subscriber: +ListSubscribers()
+    Subscriber: +GetSubscriber()
+    Subscriber: +createSubscriber()
+    
+

@@ -1,0 +1,9 @@
+flowchart TD
+    A[Stranger] -->|Visits Website| K(Increment Page View Count)
+    K --> B(Subscribed)
+    B(Subscribed) --> C(Send Welcome email with 25% discount)
+    C --> D{Wait for 24 hours}
+    D -->|open email| D[Customer Open Email]
+    D -->|Yes | E[Do Nothing]
+    D -->|No  | F[Send 50% Off Coupon]
+  

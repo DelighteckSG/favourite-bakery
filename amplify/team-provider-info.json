@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-favouritebakery-dev-163951-authRole",
+      "UnauthRoleArn": "arn:aws:iam::963320469145:role/amplify-favouritebakery-dev-163951-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::963320469145:role/amplify-favouritebakery-dev-163951-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-favouritebakery-dev-163951-deployment",
+      "UnauthRoleName": "amplify-favouritebakery-dev-163951-unauthRole",
+      "StackName": "amplify-favouritebakery-dev-163951",
+      "StackId": "arn:aws:cloudformation:ap-south-1:963320469145:stack/amplify-favouritebakery-dev-163951/fb080900-b030-11ed-a306-06bb0c7171ee",
+      "AmplifyAppId": "d1n0ry8kfmjpg1"
+    }
+  }
+}

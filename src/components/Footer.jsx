@@ -75,7 +75,7 @@ export function Footer() {
       <div class="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-md">
           <strong class="block text-center text-xl font-medium text-gray-900 dark:text-white sm:text-3xl">
-            Wan to know our best products? Subscriber here
+            Subscriber here to 50% off on first purchase online
           </strong>
 
           <form class="mt-6">

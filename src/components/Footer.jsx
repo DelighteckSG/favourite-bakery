@@ -105,11 +105,11 @@ export function Footer() {
         <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div class="mx-auto max-w-sm lg:max-w-none">
             <p class="mt-4 text-center text-gray-500 dark:text-gray-400 lg:text-left lg:text-lg">
-              Singapore's Favourite Bakery!
+              Singapore&apos;s Favourite Bakery!
             </p>
 
             <div class="mt-6 flex justify-center gap-4 lg:justify-start">
-              <a
+              <Link
                 class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                 href=""
                 target="_blank"
@@ -129,9 +129,9 @@ export function Footer() {
                     clip-rule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                 href=""
                 target="_blank"
@@ -151,9 +151,9 @@ export function Footer() {
                     clip-rule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                 href=""
                 target="_blank"
@@ -169,9 +169,9 @@ export function Footer() {
                 >
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                 href=""
                 target="_blank"
@@ -191,9 +191,9 @@ export function Footer() {
                     clip-rule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                 href=""
                 target="_blank"
@@ -213,7 +213,7 @@ export function Footer() {
                     clip-rule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -227,30 +227,30 @@ export function Footer() {
                 aria-label="Footer Services Nav"
                 class="mt-6 flex flex-col space-y-1"
               >
-                <a
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Marketing
-                </a>
-                <a
+                </Link>
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Graphic Design
-                </a>
-                <a
+                </Link>
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   App Development
-                </a>
-                <a
+                </Link>
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Web Development
-                </a>
+                </Link>
               </nav>
             </div>
 
@@ -263,30 +263,30 @@ export function Footer() {
                 aria-label="Footer About Nav"
                 class="mt-6 flex flex-col space-y-1"
               >
-                <a
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Careers
-                </a>
-                <a
+                </Link>
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   History
-                </a>
-                <a
+                </Link>
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Our Team
-                </a>
+                </Link>
               </nav>
             </div>
 
@@ -299,26 +299,26 @@ export function Footer() {
                 aria-label="Footer Support Nav"
                 class="mt-6 flex flex-col space-y-1"
               >
-                <a
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   FAQs
-                </a>
+                </Link>
 
-                <a
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Contact
-                </a>
+                </Link>
 
-                <a
+                <Link
                   class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Live Chat
-                </a>
+                </Link>
               </nav>
             </div>
           </div>
@@ -329,19 +329,19 @@ export function Footer() {
             © Company 2022. All rights reserved.
             <br />
             Created with
-            <a
+            <Link
               href=""
               class="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
             >
               Laravel
-            </a>
+            </Link>
             and
-            <a
+            <Link
               href=""
               class="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
             >
               Laravel Livewire
-            </a>
+            </Link>
             .
           </p>
         </div>

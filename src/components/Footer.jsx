@@ -1,8 +1,4 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
 import {
-  ArrowPathIcon,
-  Bars3Icon,
   BookmarkSquareIcon,
   CalendarIcon,
   ChartBarIcon,
@@ -10,13 +6,10 @@ import {
   LifebuoyIcon,
   PhoneIcon,
   PlayIcon,
-  ShieldCheckIcon,
-  Squares2X2Icon,
-  XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
+import { SubscriberHere } from "@/components/SubscribeHere";
 const categories = [
   {
     name: "Bread & Buns",
@@ -73,34 +66,7 @@ export function Footer() {
   return (
     <footer aria-label="Site Footer" className="bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-md">
-          <strong className="block text-center text-xl font-medium text-gray-900 dark:text-white sm:text-3xl">
-            Subscriber here get upto 50% off on first purchase online
-          </strong>
-
-          <form className="mt-6">
-            <div className="relative max-w-lg">
-              <label className="sr-only" htmlFor="email">
-                {" "}
-                Email{" "}
-              </label>
-
-              <input
-                className="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                id="email"
-                type="email"
-                placeholder="john@doe.com"
-              />
-
-              <button
-                className="absolute top-1/2 right-1 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
-                type="button"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
-        </div>
+        <SubscriberHere />
 
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div className="mx-auto max-w-sm lg:max-w-none">

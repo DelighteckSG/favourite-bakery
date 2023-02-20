@@ -75,7 +75,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="#">
+            <Link href="/">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto sm:h-10"

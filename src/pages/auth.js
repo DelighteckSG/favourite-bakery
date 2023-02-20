@@ -4,6 +4,7 @@ import { RadioGroup } from "@headlessui/react";
 import { recordPageView } from "@/lib/analyticsRecord";
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
+import Link from "next/link";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -101,10 +102,13 @@ export default function Example() {
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     Announcing new Offer on Cakes{" "}
-                    <a href="/cakes" className="font-semibold text-indigo-600">
+                    <Link
+                      href="/cakes"
+                      className="font-semibold text-indigo-600"
+                    >
                       <span className="absolute inset-0" aria-hidden="true" />
                       Read more <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="text-center">
@@ -113,18 +117,18 @@ export default function Example() {
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-600"></p>
                   <div className="mt-10 flex items-center justify-center gap-x-6">
-                    <a
-                      href="#"
+                    <Link
+                      href="/cakes"
                       className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Cakes
-                    </a>
-                    <a
-                      href="#"
+                    </Link>
+                    <Link
+                      href="/bread-n-buns"
                       className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Buns <span aria-hidden="true">→</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

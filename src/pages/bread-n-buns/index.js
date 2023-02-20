@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { recordPageView } from "@/lib/analyticsRecord";
+import { useState, useEffect } from "react";
 
 const products = [
   {
@@ -23,6 +25,15 @@ const products = [
 ];
 
 export default function Example() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.LOG_LEVEL = "VERBOSE";
+      let pageURL = window.location.origin + window.location.pathname;
+      console.log("page path : ", pageURL);
+      recordPageView(pageURL, 20000);
+    }
+  }, []);
+
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">

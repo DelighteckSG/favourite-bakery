@@ -21,13 +21,13 @@ const categories = [
   {
     name: "Bread & Buns",
     description: "Get a better Bread & Buns, Mini Buns.",
-    href: "#",
+    href: "/bread-n-buns",
     icon: ChartBarIcon,
   },
   {
     name: "Cakes",
     description: "Signature Cakes.",
-    href: "#",
+    href: "/cakes",
     icon: CursorArrowRaysIcon,
   },
 ];
@@ -97,7 +97,7 @@ export function Header() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      "group inline-flex items-center rounded-md bg-white text-1xl font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     )}
                   >
                     <span>Products </span>
@@ -133,7 +133,7 @@ export function Header() {
                                 aria-hidden="true"
                               />
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
+                                <p className="text-1xl font-medium text-gray-900">
                                   {item.name}
                                 </p>
                                 <p className="mt-1 text-sm text-gray-500">
@@ -148,7 +148,7 @@ export function Header() {
                             <div key={item.name} className="flow-root">
                               <Link
                                 href={item.href}
-                                className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                className="-m-3 flex items-center rounded-md p-3 text-1xl font-medium text-gray-900 hover:bg-gray-100"
                               >
                                 <item.icon
                                   className="h-6 w-6 flex-shrink-0 text-gray-400"
@@ -168,13 +168,13 @@ export function Header() {
 
             <Link
               href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              className="text-1xl font-medium text-gray-500 hover:text-gray-900"
             >
               Promotions
             </Link>
             <Link
               href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              className="text-1xl font-medium text-gray-500 hover:text-gray-900"
             >
               Locations
             </Link>
@@ -185,7 +185,7 @@ export function Header() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      "group inline-flex items-center rounded-md bg-white text-1xl font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     )}
                   >
                     <span>About US</span>
@@ -221,7 +221,7 @@ export function Header() {
                                 aria-hidden="true"
                               />
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
+                                <p className="text-1xl font-medium text-gray-900">
                                   {item.name}
                                 </p>
                                 <p className="mt-1 text-sm text-gray-500">
@@ -233,15 +233,12 @@ export function Header() {
                         </div>
                         <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
                           <div>
-                            <h3 className="text-base font-medium text-gray-500">
+                            <h3 className="text-1xl font-medium text-gray-500">
                               Recent Posts
                             </h3>
                             <ul role="list" className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
-                                <li
-                                  key={post.id}
-                                  className="truncate text-base"
-                                >
+                                <li key={post.id} className="truncate text-1xl">
                                   <Link
                                     href={post.href}
                                     className="font-medium text-gray-900 hover:text-gray-700"
@@ -272,13 +269,13 @@ export function Header() {
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <Link
               href="#"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              className="whitespace-nowrap text-1xl font-medium text-gray-500 hover:text-gray-900"
             >
               Sign in
             </Link>
             <Link
               href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
             >
               Sign up
             </Link>
@@ -328,7 +325,7 @@ export function Header() {
                         className="h-6 w-6 flex-shrink-0 text-indigo-600"
                         aria-hidden="true"
                       />
-                      <span className="ml-3 text-base font-medium text-gray-900">
+                      <span className="ml-3 text-1xl font-medium text-gray-900">
                         {item.name}
                       </span>
                     </Link>
@@ -340,14 +337,14 @@ export function Header() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link
                   href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  className="text-1xl font-medium text-gray-900 hover:text-gray-700"
                 >
                   Pricing
                 </Link>
 
                 <Link
                   href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  className="text-1xl font-medium text-gray-900 hover:text-gray-700"
                 >
                   Docs
                 </Link>
@@ -355,7 +352,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="text-1xl font-medium text-gray-900 hover:text-gray-700"
                   >
                     {item.name}
                   </Link>
@@ -364,11 +361,11 @@ export function Header() {
               <div>
                 <Link
                   href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
                   Sign up
                 </Link>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
+                <p className="mt-6 text-center text-1xl font-medium text-gray-500">
                   Existing customer?{" "}
                   <Link
                     href="#"

@@ -13,7 +13,7 @@ const products = [
     color: "Black",
   },
   {
-    id: "little-tuna-bun",
+    id: "little-almond-cream-cheese",
     name: "Little Almond Cream Cheese",
     href: "#",
     imageSrc: "https://fourleaves.com.sg/wp-content/uploads/2017/12/mini-3.png",

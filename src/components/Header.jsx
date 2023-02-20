@@ -268,16 +268,10 @@ export function Header() {
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <Link
-              href="#"
-              className="whitespace-nowrap text-1xl font-medium text-gray-500 hover:text-gray-900"
-            >
-              Sign in
-            </Link>
-            <Link
-              href="#"
+              href="/auth"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
             >
-              Sign up
+              Sign in
             </Link>
           </div>
         </div>
@@ -359,16 +353,10 @@ export function Header() {
                 ))}
               </div>
               <div>
-                <Link
-                  href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Sign up
-                </Link>
                 <p className="mt-6 text-center text-1xl font-medium text-gray-500">
                   Existing customer?{" "}
                   <Link
-                    href="#"
+                    href="/auth"
                     className="text-indigo-600 hover:text-indigo-500"
                   >
                     Sign in

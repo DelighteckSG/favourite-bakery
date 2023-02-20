@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { recordPageView } from "@/lib/analyticsRecord";
+import { Authenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -76,6 +78,10 @@ export default function Example() {
 
   return (
     <div className="bg-white">
+      <Authenticator>
+        {({ signOut, user }) => <button onClick={signOut}>Sign out</button>}
+      </Authenticator>
+
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol

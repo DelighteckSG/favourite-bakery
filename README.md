@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Supporting Blog is here
+
+[Build with AWS Amplify Series](https://blog.delighteck.com/series/build-nextjs-with-amplify)
+
 ## Getting Started
 
 First, run the development server:

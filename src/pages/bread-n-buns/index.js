@@ -7,16 +7,18 @@ const products = [
     id: "little-tuna-bun",
     name: "Little Tuna Bun",
     href: "#",
-    imageSrc: "https://fourleaves.com.sg/wp-content/uploads/2017/12/mini-1.png",
+    imageSrc:
+      "https://static3.depositphotos.com/1005269/197/i/600/depositphotos_1972367-stock-photo-buns.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
   },
   {
-    id: "little-tuna-bun",
+    id: "little-almond-cream-cheese",
     name: "Little Almond Cream Cheese",
     href: "#",
-    imageSrc: "https://fourleaves.com.sg/wp-content/uploads/2017/12/mini-3.png",
+    imageSrc:
+      "https://st5.depositphotos.com/2610399/63357/i/600/depositphotos_633572686-stock-photo-king-cake-galette-des-rois.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
@@ -54,10 +56,17 @@ export default function Example() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={product.href}>
+                    <Link
+                      href={{
+                        pathname: `/bread-n-buns/${product.id}`,
+                        query: {
+                          id: product.id,
+                        },
+                      }}
+                    >
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                 </div>

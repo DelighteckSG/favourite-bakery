@@ -8,7 +8,7 @@ const products = [
     name: "Almond Fruits Top",
     href: "#",
     imageSrc:
-      "https://st2.depositphotos.com/2951763/5970/i/600/depositphotos_59707031-stock-photo-black-forest-cake-decorated-with.jpg",
+      "https://static8.depositphotos.com/1001071/897/i/600/depositphotos_8977671-stock-photo-creamy-cake-with-fruits-and.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$75",
     color: "Black",
@@ -18,7 +18,7 @@ const products = [
     name: "Coco Exotic",
     href: "#",
     imageSrc:
-      "https://st2.depositphotos.com/2951763/5970/i/600/depositphotos_59707031-stock-photo-black-forest-cake-decorated-with.jpg",
+      "https://st4.depositphotos.com/20524830/26203/i/600/depositphotos_262031854-stock-photo-beautiful-raw-vegan-bounty-cake.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$85",
     color: "Black",
@@ -66,7 +66,14 @@ export default function Example() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <Link href={`/cakes/${product.id}`}>
+                    <Link
+                      href={{
+                        pathname: `/cakes/${product.id}`,
+                        query: {
+                          id: product.id,
+                        },
+                      }}
+                    >
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
                     </Link>

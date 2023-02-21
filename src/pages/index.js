@@ -13,7 +13,7 @@ export default function Home() {
       window.LOG_LEVEL = "VERBOSE";
       let pageURL = window.location.origin + window.location.pathname;
       console.log("page path : ", pageURL);
-      recordPageView(pageURL, 20000);
+      recordPageView(pageURL, 4000);
     }
   }, []);
 

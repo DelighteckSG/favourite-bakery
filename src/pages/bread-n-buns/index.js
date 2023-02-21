@@ -10,7 +10,7 @@ const products = [
     imageSrc:
       "https://static3.depositphotos.com/1005269/197/i/600/depositphotos_1972367-stock-photo-buns.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
@@ -20,7 +20,7 @@ const products = [
     imageSrc:
       "https://st5.depositphotos.com/2610399/63357/i/600/depositphotos_633572686-stock-photo-king-cake-galette-des-rois.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   // More products...

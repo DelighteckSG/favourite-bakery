@@ -16,6 +16,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Auth } from "aws-amplify";
 
 const categories = [
   {
@@ -70,6 +72,25 @@ function classNames(...classes) {
 }
 
 export function Header() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        if (typeof window !== "undefined") {
+          window.LOG_LEVEL = "VERBOSE";
+          let userData = await Auth.currentUserPoolUser();
+
+          console.log("userData : ", userData);
+          setUser(userData);
+        }
+      } catch {}
+    }
+    console.log("userData : ", user);
+
+    fetchData();
+  }, [user]);
+
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-7xl px-6">
@@ -267,12 +288,21 @@ export function Header() {
             </Popover>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <Link
-              href="/auth"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
-            >
-              Sign in
-            </Link>
+            {user === null ? (
+              <Link
+                href="/auth"
+                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
+              >
+                Sign in
+              </Link>
+            ) : (
+              <Link
+                href="/auth"
+                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
+              >
+                Sign Out
+              </Link>
+            )}
           </div>
         </div>
       </div>

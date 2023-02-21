@@ -1,4 +1,11 @@
 export type AmplifyDependentResourcesAttributes = {
+    "analytics": {
+        "favouritebakerypinpoint": {
+            "Region": "string",
+            "Id": "string",
+            "appName": "string"
+        }
+    },
     "api": {
         "favouritebakery": {
             "GraphQLAPIKeyOutput": "string",
@@ -17,13 +24,6 @@ export type AmplifyDependentResourcesAttributes = {
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
             "AppClientID": "string"
-        }
-    },
-    "analytics": {
-        "favouritebakerypinpoint": {
-            "Region": "string",
-            "Id": "string",
-            "appName": "string"
         }
     }
 }

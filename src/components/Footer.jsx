@@ -67,7 +67,17 @@ export function Footer() {
     <footer aria-label="Site Footer" className="bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <SubscriberHere />
-
+        <div className="mt-16 grid grid-cols-1 gap-8  lg:gap-32">
+          <Link
+            className="text-blue-700 text-3xl transition hover:text-blue-700/75 dark:text-white dark:hover:text-white/75 pt-10 pb-20"
+            href="https://blog.delighteck.com/series/build-nextjs-with-amplify"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Blog : Build with Amplify : step by step guide, how this application
+            is built
+          </Link>
+        </div>
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div className="mx-auto max-w-sm lg:max-w-none">
             <p className="mt-4 text-center text-gray-500 dark:text-gray-400 lg:text-left lg:text-lg">
@@ -299,14 +309,14 @@ export function Footer() {
               href=""
               className="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
             >
-              Laravel
+              AWS Amplify
             </Link>
             and
             <Link
               href=""
               className="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
             >
-              Laravel Livewire
+              NextJS, TailwindCSS
             </Link>
             .
           </p>

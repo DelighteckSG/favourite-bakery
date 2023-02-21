@@ -39,6 +39,14 @@ const awsmobile = {
     passwordPolicyCharacters: [],
   },
   aws_cognito_verification_mechanisms: ["EMAIL"],
+  aws_bots: "enable",
+  aws_bots_config: [
+    {
+      name: "OrderFlowers_dev",
+      alias: "$LATEST",
+      region: "us-west-2",
+    },
+  ],
 };
 
 export default awsmobile;

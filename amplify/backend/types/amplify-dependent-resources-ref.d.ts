@@ -25,5 +25,12 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string"
         }
+    },
+    "interactions": {
+        "favouritebakerylex": {
+            "Region": "string",
+            "BotName": "string",
+            "FunctionArn": "string"
+        }
     }
 }

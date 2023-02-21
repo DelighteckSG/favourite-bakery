@@ -20,6 +20,12 @@
       },
       "analytics": {
         "favouritebakerypinpoint": {}
+      },
+      "interactions": {
+        "favouritebakerylex": {
+          "deploymentBucketName": "amplify-favouritebakery-dev-163951-deployment",
+          "s3Key": "amplify-builds/favouritebakerylex-6b54515a76716b626b78-build.zip"
+        }
       }
     }
   }

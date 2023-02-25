@@ -16,7 +16,9 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-
+import { useState, useEffect } from "react";
+import { Auth } from "aws-amplify";
+import { useUser } from "@/lib/userContext";
 const categories = [
   {
     name: "Bread & Buns",
@@ -70,12 +72,48 @@ function classNames(...classes) {
 }
 
 export function Header() {
+  const { user, setUser } = useUser();
+
+  async function signOutNow() {
+    try {
+      let userData = await Auth.signOut();
+
+      console.log("signOutNow userData : ", userData);
+      setUser(null);
+    } catch (e) {
+      console.log("signOutNow Auth.signOut : ", e);
+    }
+  }
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        if (typeof window !== "undefined") {
+          window.LOG_LEVEL = "VERBOSE";
+          let userData = await Auth.currentUserPoolUser();
+
+          console.log("userData : ", userData);
+          setUser(userData);
+        }
+      } catch (e) {
+        console.log("Auth.currentUserPoolUser : ", e);
+      }
+    }
+    console.log("userData : ", user);
+
+    if (!user) {
+      fetchData();
+    } else {
+      console.log("userData NULL?: ", user);
+    }
+    console.log("userData user?: ", user);
+  }, []);
+
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="#">
+            <Link href="/">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto sm:h-10"
@@ -267,18 +305,24 @@ export function Header() {
             </Popover>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <Link
-              href="#"
-              className="whitespace-nowrap text-1xl font-medium text-gray-500 hover:text-gray-900"
-            >
-              Sign in
-            </Link>
-            <Link
-              href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
-            >
-              Sign up
-            </Link>
+            {user == null ? (
+              <Link
+                href="/auth"
+                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
+              >
+                Sign in
+              </Link>
+            ) : (
+              <>
+                Welcome {user?.attributes?.email}!
+                <button
+                  onClick={signOutNow}
+                  className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
+                >
+                  Sign Out
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -359,16 +403,10 @@ export function Header() {
                 ))}
               </div>
               <div>
-                <Link
-                  href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-1xl font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Sign up
-                </Link>
                 <p className="mt-6 text-center text-1xl font-medium text-gray-500">
                   Existing customer?{" "}
                   <Link
-                    href="#"
+                    href="/auth"
                     className="text-indigo-600 hover:text-indigo-500"
                   >
                     Sign in

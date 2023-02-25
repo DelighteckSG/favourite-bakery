@@ -1,28 +1,32 @@
 {
+  "analytics": {
+    "favouritebakerypinpoint": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
   "api": {
     "favouritebakery": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "output": {
         "authConfig": {
+          "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": []
+            },
+            "authenticationType": "API_KEY"
+          }
         }
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
     }
   },
   "auth": {
     "favouritebakery7637d70b": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
       "customAuth": false,
+      "dependsOn": [],
       "frontendAuthConfig": {
         "socialProviders": [
           "FACEBOOK",
@@ -43,13 +47,16 @@
         "verificationMechanisms": [
           "EMAIL"
         ]
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
     }
   },
-  "analytics": {
-    "favouritebakerypinpoint": {
-      "service": "Pinpoint",
-      "providerPlugin": "awscloudformation"
+  "interactions": {
+    "favouritebakerylex": {
+      "service": "Lex",
+      "providerPlugin": "awscloudformation",
+      "build": true
     }
   }
 }

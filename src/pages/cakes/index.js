@@ -8,7 +8,7 @@ const products = [
     name: "Almond Fruits Top",
     href: "#",
     imageSrc:
-      "https://fourleaves.com.sg/wp-content/uploads/2018/04/Almond-FruitTop.jpg",
+      "https://static8.depositphotos.com/1001071/897/i/600/depositphotos_8977671-stock-photo-creamy-cake-with-fruits-and.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$75",
     color: "Black",
@@ -18,7 +18,7 @@ const products = [
     name: "Coco Exotic",
     href: "#",
     imageSrc:
-      "https://fourleaves.com.sg/wp-content/uploads/2018/08/Coco-Exotic-13082018.jpg",
+      "https://st4.depositphotos.com/20524830/26203/i/600/depositphotos_262031854-stock-photo-beautiful-raw-vegan-bounty-cake.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$85",
     color: "Black",
@@ -28,7 +28,7 @@ const products = [
     name: "Mango Tropicana",
     href: "#",
     imageSrc:
-      "https://fourleaves.com.sg/wp-content/uploads/2018/04/Mango-Tropicana.png",
+      "https://st2.depositphotos.com/2951763/5970/i/600/depositphotos_59707031-stock-photo-black-forest-cake-decorated-with.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$45",
     color: "Black",
@@ -42,7 +42,7 @@ export default function Example() {
       window.LOG_LEVEL = "VERBOSE";
       let pageURL = window.location.origin + window.location.pathname;
       console.log("page path : ", pageURL);
-      recordPageView(pageURL, 20000);
+      recordPageView(pageURL, 4000);
     }
   }, []);
 
@@ -66,10 +66,17 @@ export default function Example() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={product.href}>
+                    <Link
+                      href={{
+                        pathname: `/cakes/${product.id}`,
+                        query: {
+                          id: product.id,
+                        },
+                      }}
+                    >
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                 </div>
